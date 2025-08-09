@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #dae5f5; /* Matches the right panel background */
+}
+
+/* ---------- LEFT SIDEBAR ---------- */
+.section1 {
+  width: 300px;
+  background-color: #fff;
+  padding: 2px;
+  border-right: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section1 h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #111827;
+  font-weight: 700;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.list:hover {
+  background-color: #f9fafb;
+}
+
+.list.active {
+  background-color: #d3d1d1;
+  font-weight: 600;
+}
+
+.section1 img {
+  position: sticky;
+  top: 90%;
+  right: 2%;
+  align-self: flex-end;
+  width: 55px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.section1 img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- RIGHT SECTION ---------- */
+
+.section2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+.heading {
+  color: #fff;
+  padding: 20px;
+  background-color: #001f8b;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.mainContainer {
+  padding: 30px;
+}
+
+.noteCard {
+  background: #ffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.noteTimestamp {
+  font-size: 1rem;
+  text-align: right;
+  font-weight: 600;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px; /* spacing between time, dot, date */
+}
+
+.dot {
+  font-size: 2rem; /* bigger dot */
+  line-height: 1;
+}
+
+/* ---------- INPUT BAR ---------- */
+
+.formContainer {
+  margin-top: auto;
+  background: #fff;
+  border-top: 2px solid #ccc;
+  padding: 15px 20px;
+  position: sticky;
+  bottom: 0;
+  background-color: #001f8b;
+}
+
+.formDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.formDiv textarea {
+  width: 100%;
+  height: 8rem;
+  resize: none;
+  padding-right: 35px;
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+  padding: 12px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+  outline: none;
+}
+
+.formDiv span {
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  cursor: pointer;
+  color: #6b7280;
+  margin-bottom: 10px; /* gray-500 */
+}
+
+.sendIcon {
+  cursor: pointer;
+  color: #001f8b;
+  fill: #001f8b;
+  transition: transform 0.2s ease;
+}
+
+.sendIcon:hover {
+  transform: scale(1.1);
+}
+
+.sendIconDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.initalContainer {
+  background-color: #e6f0fa;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 130px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.centerContent img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.centerContent h3 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+
+.centerContent p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  font-family: "Roboto", sans-serif;
+  max-width: 650px;
+  margin: 0 auto 5px;
+}
+
+.lockRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 175px;
+}
+
+.lockRow h4 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #555;
+  font-family: "Roboto", sans-serif;
+  margin-left: 8px;
+}
+
+/* Global scrollbar style for WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Slim vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* No heavy track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25); /* Soft dark thumb */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.45); /* Darker on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+}
+
+/* Optional: Apply only to certain containers */
+.mainContainer {
+  overflow-y: auto;
+}
+
+.mainContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.backArrow {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .section1 {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .section2 {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+
+  .container.showSection2 .section1 {
+    display: none;
+  }
+  .container.showSection2 .section2 {
+    display: flex;
+  }
+
+  .backArrow {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 10px;
+  }
+  /* Reduce padding for main content */
+  .mainContainer {
+    padding: 15px;
+  }
+
+  /* Smaller note cards */
+  .noteCard {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .noteTimestamp {
+    font-size: 0.8rem;
+    text-align: right;
+    font-weight: 600;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .dot {
+    font-size: 1rem; /* bigger dot */
+    line-height: 1;
+  }
+  /* Make textarea shorter */
+  .formDiv textarea {
+    height: 5rem;
+    font-size: 16px;
+  }
+ .formDiv span {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  cursor: pointer;
+  color: #6b7280;
+  margin-bottom: 10px; /* gray-500 */
+}
+  /* Sidebar list spacing reduced */
+  .list {
+    gap: 8px;
+    padding: 6px 8px;
+  }
+  .section1 h1 {
+    font-size: 32px;
+    margin-left: 75px;
+    margin-top: 25px;
+  }
+}
