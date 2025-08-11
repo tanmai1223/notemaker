@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@800&display=swap");
 
 * {
   border: 0;
@@ -16,23 +17,27 @@
 .section1 {
   width: 300px;
   background-color: #fff;
-  padding: 2px;
+
   border-right: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
   display: flex;
+
   flex-direction: column;
 }
 
 .section1 h1 {
   font-size: 26px;
-  margin-bottom: 20px;
   color: #111827;
   font-weight: 700;
-  margin-left: 40px;
-  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: center;
 }
 
 .list {
@@ -56,9 +61,9 @@
 }
 
 .section1 img {
-  position: sticky;
-  top: 90%;
-  right: 2%;
+  position: fixed;
+  bottom: 18px; /* instead of top: 70% */
+  left: 225px;
   align-self: flex-end;
   width: 55px;
   cursor: pointer;
@@ -279,7 +284,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .container {
     flex-direction: column;
     height: 100vh;
@@ -289,6 +294,17 @@
     width: 100%;
     height: 100vh;
     overflow-y: auto;
+  }
+
+  .section1 h1 {
+    font-size: 32px;
+    color: #111827;
+    font-weight: 700;
+    background-color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   .section2 {
     display: none;
@@ -307,13 +323,27 @@
 
   .backArrow {
     display: inline-block;
-    font-size: 1.2rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    margin-right: 10px;
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 900;
+    margin-right: 6px;
     cursor: pointer;
     color: white;
     user-select: none;
+  }
+
+  .section1 img {
+    position: fixed;
+    align-self: flex-end;
+    bottom: 6px;
+    left: 280px;
+    width: 55px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .section1 img:hover {
+    transform: scale(1.05);
   }
 
   .heading {
@@ -351,22 +381,17 @@
     height: 5rem;
     font-size: 16px;
   }
- .formDiv span {
-  position: absolute;
-  top: 55%;
-  right: 10px;
-  cursor: pointer;
-  color: #6b7280;
-  margin-bottom: 10px; /* gray-500 */
-}
+  .formDiv span {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    cursor: pointer;
+    color: #6b7280;
+    margin-bottom: 10px; /* gray-500 */
+  }
   /* Sidebar list spacing reduced */
   .list {
     gap: 8px;
     padding: 6px 8px;
-  }
-  .section1 h1 {
-    font-size: 32px;
-    margin-left: 75px;
-    margin-top: 25px;
   }
 }

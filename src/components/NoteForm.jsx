@@ -42,13 +42,22 @@ function NoteForm({ selectedGroup, setNote, toast }) {
 
   return (
     <div className={style.formContainer}>
-      <form onSubmit={handleSend}>
+      <form >
         <div className={style.formDiv}>
           <textarea
             placeholder="Enter your text here..."
             name="text"
             value={make.text}
             onChange={handleChange}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && make.text.trim()) {
+                e.preventDefault(); // stops newline or unwanted behavior
+                handleSend();
+              } else if (e.key === "Enter") {
+                e.preventDefault();
+                toast.error("Please enter a message before sending!");
+              }
+            }}
           />
           <span>
             <SendHorizontal

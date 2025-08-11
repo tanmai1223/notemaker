@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import style from "../styles/main.module.css";
 import { StoreContext } from "../context/Store";
 import { toast, Toaster } from "react-hot-toast";
-
+import { ArrowLeft } from "lucide-react";
 import GroupList from "./GroupList";
 import NotesList from "./NotesList";
 import NoteForm from "./NoteForm";
@@ -36,7 +36,9 @@ function MainComponent() {
   }
 
   return (
-   <div className={`${style.container} ${showSection2 ? style.showSection2 : ""}`}>
+    <div
+      className={`${style.container} ${showSection2 ? style.showSection2 : ""}`}
+    >
       <Toaster position="top-right" reverseOrder={false} />
 
       {/* Left section - Groups */}
@@ -52,9 +54,8 @@ function MainComponent() {
         {selectedGroup ? (
           <>
             <div className={style.heading}>
-              <span className={style.backArrow}onClick={handleBackClick}>
-                &#8592;
-              </span>
+              <ArrowLeft size={32} strokeWidth={4} color="white" className={style.backArrow} onClick={handleBackClick}/>
+              
               <span
                 style={{
                   width: "40px",
