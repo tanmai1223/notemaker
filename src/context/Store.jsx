@@ -3,7 +3,6 @@ import { createContext, useState, useEffect } from "react";
 const StoreContext = createContext();
 
 const StoreProvider = ({ children }) => {
-  // Load immediately on first render using lazy initialization
   const [group, setGroup] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem("group")) || [];
@@ -20,12 +19,10 @@ const StoreProvider = ({ children }) => {
     }
   });
 
-  // Save when group changes
   useEffect(() => {
     localStorage.setItem("group", JSON.stringify(group));
   }, [group]);
 
-  // Save when note changes
   useEffect(() => {
     localStorage.setItem("note", JSON.stringify(note));
   }, [note]);
