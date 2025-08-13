@@ -20,7 +20,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   line-height: 2rem;
   border-radius: 8px;
-  z-index: 1000; /* ✅ Add this */
+  z-index: 1000;
 }
 
 .createForm {
@@ -54,11 +54,11 @@
 
 .modalFooter {
   display: flex;
-  justify-content: flex-end; /* Pushes button to right */
+  justify-content: flex-end;
 }
 
 .modalFooter button {
-  width: auto; /* Button only as wide as its content */
+  width: auto;
   padding: 8px 32px;
   border: none;
   border-radius: 6px;
@@ -112,12 +112,12 @@
     font-size: 13px;
   }
   .color {
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-}
+    padding: 10px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
   .colorOptions {
     display: flex;
     gap: 5px;

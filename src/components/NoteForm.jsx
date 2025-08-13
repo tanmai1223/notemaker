@@ -21,7 +21,7 @@ function NoteForm({ selectedGroup, setNote, toast }) {
     const now = new Date();
     const newNote = {
       group: selectedGroup.name,
-      text: make.text.trim(),
+      text: make.text,
       time: now.toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
@@ -51,7 +51,7 @@ function NoteForm({ selectedGroup, setNote, toast }) {
             onChange={handleChange}
             onKeyDown={(e) => {
               if (e.key === "Enter" && make.text.trim()) {
-                e.preventDefault(); // stops newline or unwanted behavior
+                e.preventDefault(); 
                 handleSend();
               } else if (e.key === "Enter") {
                 e.preventDefault();

@@ -10,10 +10,10 @@
   display: flex;
   height: 100vh;
   font-family: "Segoe UI", sans-serif;
-  background-color: #dae5f5; /* Matches the right panel background */
+  background-color: #dae5f5; 
 }
 
-/* ---------- LEFT SIDEBAR ---------- */
+
 .section1 {
   width: 300px;
   background-color: #fff;
@@ -62,7 +62,7 @@
 
 .section1 img {
   position: fixed;
-  bottom: 18px; /* instead of top: 70% */
+  bottom: 18px; 
   left: 225px;
   align-self: flex-end;
   width: 55px;
@@ -74,7 +74,6 @@
   transform: scale(1.05);
 }
 
-/* ---------- RIGHT SECTION ---------- */
 
 .section2 {
   flex: 1;
@@ -116,15 +115,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 8px; /* spacing between time, dot, date */
+  gap: 8px; 
 }
 
 .dot {
-  font-size: 2rem; /* bigger dot */
+  font-size: 2rem; 
   line-height: 1;
 }
-
-/* ---------- INPUT BAR ---------- */
 
 .formContainer {
   margin-top: auto;
@@ -165,7 +162,7 @@
   right: 10px;
   cursor: pointer;
   color: #6b7280;
-  margin-bottom: 10px; /* gray-500 */
+  margin-bottom: 10px; 
 }
 
 .sendIcon {
@@ -260,13 +257,6 @@
   background-color: rgba(0, 0, 0, 0.45); /* Darker on hover */
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
-}
-
-/* Optional: Apply only to certain containers */
 .mainContainer {
   overflow-y: auto;
 }
@@ -352,12 +342,10 @@
     padding: 12px;
     font-size: 10px;
   }
-  /* Reduce padding for main content */
   .mainContainer {
     padding: 15px;
   }
 
-  /* Smaller note cards */
   .noteCard {
     padding: 10px 12px;
     font-size: 14px;
@@ -373,10 +361,10 @@
     align-items: center;
   }
   .dot {
-    font-size: 1rem; /* bigger dot */
+    font-size: 1rem; 
     line-height: 1;
   }
-  /* Make textarea shorter */
+  
   .formDiv textarea {
     height: 5rem;
     font-size: 16px;
@@ -387,9 +375,9 @@
     right: 10px;
     cursor: pointer;
     color: #6b7280;
-    margin-bottom: 10px; /* gray-500 */
+    margin-bottom: 10px; 
   }
-  /* Sidebar list spacing reduced */
+  
   .list {
     gap: 8px;
     padding: 6px 8px;

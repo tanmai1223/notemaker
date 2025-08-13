@@ -29,8 +29,7 @@ function CreateGroup({ onClose }) {
       return;
     }
 
-    // Trim and check for duplicates (case-insensitive)
-    const nameExists = group.some(
+   const nameExists = group.some(
       (g) => g.name.trim().toLowerCase() === add.name.trim().toLowerCase()
     );
 

@@ -8,7 +8,6 @@ function NotesList({ notes, selectedGroup }) {
   return (
     <>
      
-      {/* Notes list */}
       <div className={style.mainContainer}>
         {notes
           .filter((note) => note.group === selectedGroup.name)

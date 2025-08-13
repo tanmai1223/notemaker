@@ -14,21 +14,19 @@ function MainComponent() {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const { group, note, setNote } = useContext(StoreContext);
 
-  // Mobile toggle: show only section2 or section1
   const [showSection2, setShowSection2] = useState(false);
 
-  // When selectedGroup changes, on mobile show section2
   useEffect(() => {
     if (selectedGroup && window.innerWidth <= 768) {
       setShowSection2(true);
     }
   }, [selectedGroup]);
 
-  // Handle back arrow click to show section1 (groups) on mobile
-  const handleBackClick = () => {
+ const handleBackClick = () => {
     setShowSection2(false);
-    setSelectedGroup(null); // optional: clear selection on back
+    setSelectedGroup(null); 
   };
+
   function getInitials(name) {
     const words = name.trim().split(/\s+/);
     if (words.length === 1) return words[0][0].toUpperCase();
@@ -41,16 +39,14 @@ function MainComponent() {
     >
       <Toaster position="top-right" reverseOrder={false} />
 
-      {/* Left section - Groups */}
-      <GroupList
+     <GroupList
         groups={group}
         selectedGroup={selectedGroup}
         onSelectGroup={setSelectedGroup}
         onAddGroup={() => setShowModal(true)}
       />
 
-      {/* Right section - Notes */}
-      <div className={style.section2}>
+     <div className={style.section2}>
         {selectedGroup ? (
           <>
             <div className={style.heading}>
