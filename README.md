@@ -1,12 +1,65 @@
-# React + Vite
+# 📝 Note Maker
+Organize your ideas effortlessly! Create groups, add notes, and never lose them — even after a page reload.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
+📂 Create & Manage Groups – Add new groups via popup, close by clicking outside.
 
-Currently, two official plugins are available:
+🚫 No Duplicates – Prevents adding groups with the same name.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🅰 Auto Avatar – Generates a avatar from group name.
 
-## Expanding the ESLint configuration
+🗒 Group-Specific Notes – Each group holds its own notes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⌨ Quick Save – Save with Enter key or Send icon.
+
+💾 Persistent Data – Uses LocalStorage to keep notes/groups after reload.
+
+🔄 Instant Switching – Changing groups fetches relevant notes instantly.
+
+⏱ Meta Data – Stores date & time for creation & last update.
+
+🎨 Smart Send Button – Active color only when text is present.
+
+## 🛠 Tech Stack
+⚛ React.js – Frontend framework
+
+🎨 CSS Modules – Styling
+
+💽 LocalStorage – Persistent browser storage
+
+## 🚀 Getting Started
+```bash
+# 1️⃣ Clone the repo
+git clone https://github.com/yourusername/note-maker.git
+cd note-maker
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Start the development server
+npm start
+```
+## 📂 Folder Structure
+```bash
+src/
+├── components/
+│   ├── CreateGroup.jsx
+│   ├── GroupList.jsx
+│   ├── NotesList.jsx
+│   ├── NoteForm.jsx
+│   └── EmptyState.jsx
+├── context/Store.js
+├── styles/main.module.css
+├── App.jsx
+└── index.js
+```
+## 🖼 Screenshots
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c9291f5-4591-47a3-89d8-12d356d187e6" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6e645887-0023-4717-8277-9ca4849d7767" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/260e401b-1e09-4645-a9ea-3ab3b807f5ed" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8c8d150c-6f97-41fe-8ff6-d837848b6854" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4ebf569a-6ef6-4986-b265-382514a4c6fa" />
+
+
+## 📜 License
+Licensed under the MIT License – feel free to use & modify!
