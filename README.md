@@ -22,7 +22,7 @@ Organize your ideas effortlessly! Create groups, add notes, and never lose them 
 
 ## 🔗 Live Demo 
 
-🔗 [Live Demo]([notemaker](https://notemakerpro.netlify.app/)) 
+([notemaker](https://notemakerpro.netlify.app/)) 
 
 ---
 
