@@ -20,6 +20,12 @@ Organize your ideas effortlessly! Create groups, add notes, and never lose them 
 
 🎨 Smart Send Button – Active color only when text is present.
 
+## 🔗 Live Demo 
+
+🔗 [Live Demo]([notemaker](https://notemakerpro.netlify.app/)) 
+
+---
+
 ## 🛠 Tech Stack
 ⚛ React.js – Frontend framework
 
